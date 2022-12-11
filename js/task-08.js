@@ -5,8 +5,10 @@ function onSearch(event) {
     event.preventDefault();
     const { email, password } = event.currentTarget.elements ;
     if (email.value === "" || password.value === "") {
-    alert("Всі поля повинні бути заповнені");
+    return alert("Всі поля повинні бути заповнені");
     }
-    console.dir(`Email: ${email.value}, Password: ${password.value}`);  
+    const formValue = { email: email.value, Password: password.value };
+    console.log(formValue);  
     event.currentTarget.reset();
 }
+
