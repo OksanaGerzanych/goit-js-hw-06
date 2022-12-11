@@ -6,10 +6,8 @@ console.log('Number of categories:', categories.length);
 const categoriesName = document.querySelectorAll('.item h2');
 const categoriesUl = document.querySelectorAll('.item ul');
 
+categories.forEach(element => {
+  console.log(`Category: ${element.firstElementChild.textContent}`);
+  console.log(`Elements: ${element.lastElementChild.children.length}`);
+ })
 
-const categoriesArray = [...categories].map(
-    categories => `Category: ${categories.children[0].textContent}    
-Elements: ${categories.children[1].children.length}`
-  ).join("\n");
-
-console.log(categoriesArray);
