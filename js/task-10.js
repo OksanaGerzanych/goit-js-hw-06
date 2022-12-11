@@ -14,18 +14,12 @@ function createBoxes(amount) {
   
   console.log(amount)
   const boxes = document.createElement('div');
-  //const input.value = amount.currentTarget.value;
   
-
   boxes.style.backgroundColor = getRandomHexColor(); 
-  boxes.style.size = '30';
-    divBoxes.append(boxes);
+  boxes.style.height = '30px';
+  boxes.style.width = '30px';
+  divBoxes.append(boxes);
   
- if (boxes !== 1) {
-   const boxes.style.size += 10;
-  }
-  console.log(boxes);
-// const markup = 
 }
 
 
