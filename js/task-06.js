@@ -7,9 +7,19 @@ const atributeValue = inputValid.dataset.length;
 inputValid.addEventListener('blur', () => {
     if (inputValid.value.length.toString() === atributeValue) {
         inputValid.classList.add("valid");
-        inputValid.classList.remove("invalid");
-    } else
-        inputValid.classList.add("invalid");
+        
+        if (inputValid.classList.contains('invalid')) {
+            inputValid.classList.remove('invalid')
+        }
+        inputValid.classList.remove('invalid');
+       
+    } else {
+        if (inputValid.classList.contains('valid')) {
+            inputValid.classList.remove('valid')
+        }
+        inputValid.classList.add('invalid');
+    }
+       
       
 });
 
